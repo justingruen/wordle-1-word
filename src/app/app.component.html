@@ -1,0 +1,17 @@
+<input type="text" maxlength="1" [(ngModel)]="wordInBox" [disabled]="won" />
+<button (click)="checkWord()" [disabled]="won">Submit</button>
+<button (click)="resetGame()">Reset</button>
+<br />
+<br />
+Lives Left
+<br />
+{{ livesLeft }}
+
+<br />
+<br />
+<p *ngIf="won">Congrats! You win!</p>
+<p *ngIf="livesLeft === 0">You fucking suck</p>
+<p *ngIf="boxIsEmpty">You gotta type something in the box...</p>
+<p *ngIf="displayText">
+  You know what just for being a dumbass I'm gonna take a life off this one time
+</p>
