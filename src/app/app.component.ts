@@ -37,7 +37,9 @@ export class AppComponent {
       if (this.wordInBox !== this.winWord) {
         document.getElementById("wordInput")?.classList.add('redText');
         this.livesLeft = this.livesLeft - 1;
+        
       } else {
+        this.removeColoring();
         this.won = true;
       }
     }
