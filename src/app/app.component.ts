@@ -35,11 +35,16 @@ export class AppComponent {
         this.boxIsEmpty = false;
       }
       if (this.wordInBox !== this.winWord) {
+        document.getElementById("wordInput")?.classList.add('redText');
         this.livesLeft = this.livesLeft - 1;
       } else {
         this.won = true;
       }
     }
+  }
+
+  removeColoring() {
+    document.getElementById("wordInput")?.classList.remove('redText');
   }
 
   resetGame() {
@@ -51,5 +56,6 @@ export class AppComponent {
     this.displayText = false;
     this.won = false;
     this.boxIsEmpty = false;
+    document.getElementById("wordInput")?.classList.remove('greenText');
   }
 }

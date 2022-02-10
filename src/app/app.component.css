@@ -2,6 +2,10 @@ p {
   font-family: Lato;
 }
 
-.green {
-  
+.greenText {
+  color: green;
+}
+
+.redText {
+  color: red;
 }

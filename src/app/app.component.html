@@ -1,4 +1,5 @@
-<input type="text" maxlength="1" [(ngModel)]="wordInBox" [disabled]="won" />
+<input type="text" maxlength="1" [(ngModel)]="wordInBox" [disabled]="won" [ngClass]="{'greenText': won}" id="wordInput" (click)="removeColoring()"/>
+<!-- won ? 'greenText' : 'redText' -->
 <button (click)="checkWord()" [disabled]="won">Submit</button>
 <button (click)="resetGame()">Reset</button>
 <br />
